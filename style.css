@@ -98,6 +98,7 @@ ul { list-style: none; }
 /* Grids */
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
 .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
 .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; }
 
 /* Buttons */
@@ -751,13 +752,14 @@ ul { list-style: none; }
 /* Responsive */
 @media (max-width: 992px) {
     .grid-5 { grid-template-columns: repeat(3, 1fr); }
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
     .grid-3 { grid-template-columns: repeat(2, 1fr); }
     .masonry-gallery { grid-template-columns: repeat(2, 1fr); }
     .gallery-item.large { grid-column: span 1; grid-row: span 1; }
 }
 
 @media (max-width: 768px) {
-    .grid-2, .grid-3, .grid-5 { grid-template-columns: 1fr; }
+    .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
     
     .nav-links, .phone-nav { display: none; }
     
