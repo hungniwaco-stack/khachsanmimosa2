@@ -34,7 +34,7 @@
             </nav>
             <div class="header-actions">
                 <span class="phone-nav"><i class="fa-solid fa-phone"></i> 0889 988 060</span>
-                <a href="#book" class="btn btn-primary">Đặt Phòng</a>
+                <a href="#booking-form" class="btn btn-primary">Đặt Ngay & Giữ Giá</a>
             </div>
             <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
@@ -46,11 +46,21 @@
             <img src="assets/images/hero.png" alt="Khách sạn MIMOSA 2 Phan Rang">
         </div>
         <div class="hero-content container fade-in">
-            <h1>Lưu Trú Thoải Mái Ngay Trung Tâm Phan Rang</h1>
-            <p>Trải nghiệm nghỉ dưỡng tiện nghi, sang trọng với mức giá hợp lý. Lựa chọn hoàn hảo cho kỳ nghỉ gia đình, cặp đôi và chuyến công tác của bạn.</p>
+            <h1>Khách Sạn Trung Tâm K1 Phan Rang</h1>
+            <ul class="hero-usp">
+                <li><i class="fa-solid fa-location-dot"></i> Cách biển Bình Sơn 5 phút</li>
+                <li><i class="fa-solid fa-tag"></i> Giá chỉ từ 500.000đ/đêm</li>
+                <li><i class="fa-solid fa-car"></i> Miễn phí bãi đậu xe ô tô</li>
+            </ul>
             <div class="hero-btns">
-                <a href="#book" class="btn btn-primary btn-large">Đặt Phòng Ngay</a>
-                <a href="#combos" class="btn btn-outline btn-large">Xem Khuyến Mãi</a>
+                <a href="#booking-form" class="btn btn-primary btn-large">Kiểm tra phòng trống</a>
+                <a href="#booking-form" class="btn btn-outline btn-large">Nhận báo giá trong 30s</a>
+            </div>
+            
+            <div class="trust-badge-bar fade-in-up" style="transition-delay: 0.3s;">
+                <div class="badge-item"><i class="fa-solid fa-star"></i> 4.8/5 (Từ 500+ khách)</div>
+                <div class="badge-item"><i class="fa-solid fa-heart"></i> Khách Sạn Được Yêu Thích</div>
+                <div class="badge-item"><i class="fa-solid fa-calendar-check"></i> 10+ Năm Hoạt Động</div>
             </div>
         </div>
     </section>
@@ -162,7 +172,7 @@
                             <li><i class="fa-solid fa-tv"></i> Smart TV</li>
                             <li><i class="fa-solid fa-bath"></i> Phòng tắm riêng</li>
                         </ul>
-                        <a href="https://zalo.me/84889988060" class="btn btn-outline w-100">Liên hệ đặt phòng</a>
+                        <a href="#booking-form" class="btn btn-outline w-100">Kiểm tra phòng trống</a>
                     </div>
                 </div>
                 <!-- Room Card 2 -->
@@ -180,7 +190,7 @@
                             <li><i class="fa-solid fa-tv"></i> Smart TV</li>
                             <li><i class="fa-solid fa-people-roof"></i> Không gian rộng rãi</li>
                         </ul>
-                        <a href="https://zalo.me/84889988060" class="btn btn-outline w-100">Liên hệ đặt phòng</a>
+                        <a href="#booking-form" class="btn btn-outline w-100">Kiểm tra phòng trống</a>
                     </div>
                 </div>
                 <!-- Room Card 3 (VIP) -->
@@ -198,8 +208,48 @@
                             <li><i class="fa-solid fa-tv"></i> Smart TV 55"</li>
                             <li><i class="fa-solid fa-bath"></i> Bồn tắm nằm</li>
                         </ul>
-                        <a href="https://zalo.me/84889988060" class="btn btn-primary w-100">Liên hệ đặt phòng</a>
+                        <a href="#booking-form" class="btn btn-primary w-100">Đặt ngay để giữ giá</a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3.5 Booking Form Section -->
+    <section id="booking-form" class="booking-section section-padding">
+        <div class="container">
+            <div class="booking-wrapper grid-2 align-center">
+                <div class="booking-info fade-in-up">
+                    <h2>Đặt Phòng Ngay Hôm Nay</h2>
+                    <p>Hãy để lại thông tin, chúng tôi sẽ liên hệ lại trong vòng 30 giây để xác nhận phòng và giữ mức giá ưu đãi nhất cho bạn.</p>
+                    <ul class="booking-benefits">
+                        <li><i class="fa-solid fa-check"></i> Hoàn hủy linh hoạt</li>
+                        <li><i class="fa-solid fa-check"></i> Không cần đặt cọc trước</li>
+                        <li><i class="fa-solid fa-check"></i> Hỗ trợ nhận phòng sớm (nếu có)</li>
+                    </ul>
+                </div>
+                <div class="booking-form-container fade-in-up" style="transition-delay: 0.2s;">
+                    <form name="booking" method="POST" data-netlify="true" class="custom-form">
+                        <div class="form-group">
+                            <label>Họ và Tên *</label>
+                            <input type="text" name="name" required placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="form-group">
+                            <label>Số Điện Thoại *</label>
+                            <input type="tel" name="phone" required placeholder="09xx xxx xxx">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ngày nhận phòng</label>
+                                <input type="date" name="checkin">
+                            </div>
+                            <div class="form-group">
+                                <label>Ngày trả phòng</label>
+                                <input type="date" name="checkout">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 btn-large">Gửi Yêu Cầu Đặt Phòng</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -299,6 +349,39 @@
         </div>
     </section>
 
+    <!-- 6.5 Local Tours -->
+    <section id="local-tours" class="local-tours section-padding">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2>Khám Phá Địa Phương</h2>
+                <p>Ninh Thuận không chỉ có nắng và gió. Từ Mimosa 2, bạn dễ dàng khám phá các tuyệt tác thiên nhiên chỉ từ 15-30 phút di chuyển.</p>
+            </div>
+            <div class="grid-3 fade-in-up">
+                <div class="tour-card">
+                    <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=600&q=80" alt="Vịnh Vĩnh Hy" loading="lazy">
+                    <div class="tour-info">
+                        <h3>Vịnh Vĩnh Hy</h3>
+                        <p>Một trong 4 vịnh đẹp nhất Việt Nam, nơi giao hòa giữa biển xanh và núi đá.</p>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="https://images.unsplash.com/photo-1559132174-8b6f3a38612f?auto=format&fit=crop&w=600&q=80" alt="Hang Rái" loading="lazy">
+                    <div class="tour-info">
+                        <h3>Hang Rái</h3>
+                        <p>Kỳ quan thiên nhiên với thềm san hô cổ nghìn năm tuổi vươn ra trước biển khơi.</p>
+                    </div>
+                </div>
+                <div class="tour-card">
+                    <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=600&q=80" alt="Đồng Cừu" loading="lazy">
+                    <div class="tour-info">
+                        <h3>Đồng Cừu</h3>
+                        <p>Trải nghiệm văn hóa du mục độc đáo và những bức ảnh check-in tựa trời Âu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- 7. Location Section -->
     <section id="location" class="location section-padding bg-secondary">
         <div class="container">
@@ -366,7 +449,7 @@
             <h2>Đặt phòng ngay hôm nay cho kỳ nghỉ trọn vẹn</h2>
             <p>Liên hệ trực tiếp với chúng tôi để nhận mức giá ưu đãi nhất.</p>
             <div class="cta-buttons">
-                <a href="https://zalo.me/84889988060" class="btn btn-primary btn-large"><i class="fa-solid fa-message"></i> Zalo / Đặt Phòng</a>
+                <a href="#booking-form" class="btn btn-primary btn-large"><i class="fa-solid fa-message"></i> Đặt Phòng Ngay</a>
                 <a href="tel:0889988060" class="btn btn-outline btn-large" style="color: white; border-color: white;"><i class="fa-solid fa-phone"></i> Gọi Hotline</a>
             </div>
         </div>
